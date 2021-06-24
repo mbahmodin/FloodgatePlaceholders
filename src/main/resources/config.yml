@@ -1,40 +1,40 @@
 # Enables the use of specific device descriptors for PlaceholderAPI
-specific-device-descriptors: true
+specific-device-descriptors: false
 
 # The device strings for the placeholder
 device:
-  java: "&8[&aJava&8]"
-  generic: "&8[&7Bedrock&8]"
-  unknown: "&8[&aUnknown&8]"
-  google: "&8[&aAndroid&8]"
-  ios: "&8[&bi&fOS&8]"
-  osx: "&8[&fOS&bX&8]"
-  amazon: "&8[&6Amazon&8]"
-  gearvr: "&8[&7Gear&fVR&8]"
-  hololens: "&8[&7Holo&fLens&8]"
-  uwp: "&8[&3UWP&8]"
-  win32: "&8[&3Win&f32&8]"
-  dedicated: "&8[&aDED&8]"
-  ps4: "&8[&3PS4&8]"
-  nx: "&8[&eSwitch&8]"
-  xbox: "&8[&2Xbox&8]"
+  java: "Java"
+  generic: "Bedrock"
+  unknown: "Unknown"
+  google: "Android"
+  ios: "iOS"
+  osx: "OSX"
+  amazon: "Amazon"
+  gearvr: "GearVR"
+  hololens: "HoloLens"
+  uwp: "UWP"
+  win32: "Win32"
+  dedicated: "DED"
+  ps4: "PS4"
+  nx: "Switch"
+  xbox: "Xbox"
 
 # The locale format (none for java users)
 locale:
-  found: "&8[&6%locale%&8]"
-  none: "&8[&6N/A&8]"
+  found: "%locale%"
+  none: "N/A"
 
 # Bedrock version format (none for java users)
 version:
-  found: "&8[&6%version%&8]"
-  none: "&8[&6N/A&8]"
+  found: "%version%"
+  none: "N/A"
 
 # Xbox username format (none for java users)
 xbox-username:
-  found: "&8[&6%username%&8]"
-  none: "&8[&6N/A&8]"
+  found: "%username%"
+  none: "%name%"
 
 # Xbox xuid format (none for java users)
 xbox-xuid:
-  found: "&8[&6%xuid%&8]"
-  none: "&8[&6N/A&8]"
+  found: "%xuid%"
+  none: "N/A"

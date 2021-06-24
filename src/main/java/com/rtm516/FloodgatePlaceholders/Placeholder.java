@@ -84,14 +84,14 @@ public class Placeholder extends PlaceholderExpansion implements Configurable {
                 if (floodgatePlayer != null) {
                     return config.getXboxUsername().getFound().replace("%username%", floodgatePlayer.getUsername());
                 } else {
-                    return config.getXboxUsername().getNone();
+                    return config.getXboxUsername().getNone().replace("%name%", player.getName());
                 }
 
             case "xuid":
                 if (floodgatePlayer != null) {
                     return config.getXboxXuid().getFound().replace("%xuid%", floodgatePlayer.getXuid());
                 } else {
-                    return config.getXboxXuid().getNone();
+                    return config.getXboxXuid().getNone().replace("%uuid%", player.getUniqueId().toString());
                 }
         }
 
@@ -151,29 +151,29 @@ public class Placeholder extends PlaceholderExpansion implements Configurable {
         }
 
         final Map<String, Object> defaults = new HashMap<>();
-        defaults.put("device.java", "&8[&aJava&8]");
-        defaults.put("device.generic", "&8[&7Bedrock&8]");
-        defaults.put("device.unknown", "&8[&aUnknown&8]");
-        defaults.put("device.google", "&8[&aAndroid&8]");
-        defaults.put("device.ios", "&8[&bi&fOS&8]");
-        defaults.put("device.osx", "&8[&fOS&bX&8]");
-        defaults.put("device.amazon", "&8[&6Amazon&8]");
-        defaults.put("device.gearvr", "&8[&7Gear&fVR&8]");
-        defaults.put("device.hololens", "&8[&7Holo&fLens&8]");
-        defaults.put("device.uwp", "&8[&3UWP&8]");
-        defaults.put("device.win32", "&8[&3Win&f32&8]");
-        defaults.put("device.dedicated", "&8[&aDED&8]");
-        defaults.put("device.ps4", "&8[&3PS4&8]");
-        defaults.put("device.nx", "&8[&eSwitch&8]");
-        defaults.put("device.xbox", "&8[&2Xbox&8]");
-        defaults.put("locale.found", "&8[&6%locale%&8]");
-        defaults.put("locale.none", "&8[&6N/A&8]");
-        defaults.put("version.found", "&8[&6%version%&8]");
-        defaults.put("version.none", "&8[&6N/A&8]");
-        defaults.put("xbox-username.found", "&8[&6%username%&8]");
-        defaults.put("xbox-username.none", "&8[&6N/A&8]");
-        defaults.put("xbox-xuid.found", "&8[&6%xuid%&8]");
-        defaults.put("xbox-xuid.none", "&8[&6N/A&8]");
+        defaults.put("device.java", "Java");
+        defaults.put("device.generic", "Bedrock");
+        defaults.put("device.unknown", "Unknown");
+        defaults.put("device.google", "Android");
+        defaults.put("device.ios", "iOS");
+        defaults.put("device.osx", "OSX");
+        defaults.put("device.amazon", "Amazon");
+        defaults.put("device.gearvr", "GearVR");
+        defaults.put("device.hololens", "HoloLens");
+        defaults.put("device.uwp", "UWP");
+        defaults.put("device.win32", "Win32");
+        defaults.put("device.dedicated", "DED");
+        defaults.put("device.ps4", "PS4");
+        defaults.put("device.nx", "Switch");
+        defaults.put("device.xbox", "Xbox");
+        defaults.put("locale.found", "locale");
+        defaults.put("locale.none", "N/A");
+        defaults.put("version.found", "%version%");
+        defaults.put("version.none", "N/A");
+        defaults.put("xbox-username.found", "%username%");
+        defaults.put("xbox-username.none", "%name%");
+        defaults.put("xbox-xuid.found", "%xuid%");
+        defaults.put("xbox-xuid.none", "N/A");
         return defaults;
     }
 }
